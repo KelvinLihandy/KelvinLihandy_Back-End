@@ -16,9 +16,7 @@ class CartController extends Controller
         $items = Item::all();
         $userID = Auth::user()->id;
         $carts = Cart::where('user_id', $userID)->where('saved', 0)->get();
-        // $address_address = Cart::pluck('address')->unique();
-        // $post_code_post_code = Cart::pluck('post_code')->unique();
-        return view('cart', compact('items', 'carts'/*, 'address_address', 'post_code_post_code'*/));
+        return view('cart', compact('items', 'carts'));
     }
 
     public function addCart(CartRequest $request){

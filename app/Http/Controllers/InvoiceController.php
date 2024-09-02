@@ -49,8 +49,8 @@ class InvoiceController extends Controller
         $content .= "Items: \n";
         foreach($carts as $cart) {
             $content .= $cart->item->category->name."\n";
-            $content .= $cart->item->name.' x'.$cart->item->quantity."\n";
-            $content .= 'Rp. '.$cart->item->price*$cart->item->quantity."\n\n";
+            $content .= $cart->item->name.' x'.$cart->quantity."\n";
+            $content .= 'Rp. '.$cart->item->price*$cart->quantity."\n\n";
         }
         $fileName = 'i-'.$invoice.'-'.Auth::user()->name.'.txt';
         $filePath = storage_path('app/public/' . $fileName);

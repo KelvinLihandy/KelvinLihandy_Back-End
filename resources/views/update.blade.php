@@ -18,7 +18,7 @@
                     @method('patch')
                     <div class="mb-3">
                         <label for="image" class="form-label">image</label>
-                        <input name="image" type="file" class="form-control" id="formGroupExampleInput" placeholder="input image">
+                        <input name="image" type="file" class="form-control" id="formGroupExampleInput" placeholder="input image" value="{{$item->image}}">
                         @error('image')
                         <div class="text-danger">
                             {{ $message }}
@@ -27,7 +27,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="name" class="form-label">name</label>
-                        <input name="name" value={{$item->name}} type="text" class="form-control" id="formGroupExampleInput" placeholder="input title">
+                        <input name="name" value="{{$item->name}}" type="text" class="form-control" id="formGroupExampleInput" placeholder="input title">
                         @error('title')
                         <div class="text-danger">
                             {{ $message }}

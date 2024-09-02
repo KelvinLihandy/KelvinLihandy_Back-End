@@ -39,7 +39,7 @@
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$cart->item->name}}</td>
                                 <td>{{$cart->item->category->name}}</td>
-                                <td>{{$cart->item->quantity}}</td>
+                                <td>{{$cart->quantity}}</td>
                                 <td>Rp.{{$cart->item->price*$cart->quantity}}</td>
                                 @php
                                 $sum += $cart->item->price*$cart->quantity;
